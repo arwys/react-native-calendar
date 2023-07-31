@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {ActivityIndicator, View, Text, TouchableOpacity} from 'react-native';
+import {ActivityIndicator, View, Text, TouchableOpacity,Image} from 'react-native';
 
 import XDate from 'xdate';
 import PropTypes from 'prop-types';
 import styleConstructor from './style';
 import {weekDayNames} from '../../dateutils';
 import {CHANGE_MONTH_LEFT_ARROW, CHANGE_MONTH_RIGHT_ARROW} from '../../testIDs';
-import ImageWrapper from '../../../../src/components/Images/ImageWrapper';
+
 
 class CalendarHeader extends Component {
   static displayName = 'IGNORE';
@@ -105,7 +105,7 @@ class CalendarHeader extends Component {
           {this.props.renderArrow ? (
             this.props.renderArrow('left')
           ) : (
-            <ImageWrapper source={require('../img/previous.png')} style={this.style.arrowImage}/>
+            <Image source={require('../img/previous.png')} style={this.style.arrowImage}/>
           )}
         </TouchableOpacity>
       );
@@ -119,7 +119,7 @@ class CalendarHeader extends Component {
           {this.props.renderArrow ? (
             this.props.renderArrow('right')
           ) : (
-            <ImageWrapper source={require('../img/next.png')} style={this.style.arrowImage}/>
+            <Image source={require('../img/next.png')} style={this.style.arrowImage}/>
           )}
         </TouchableOpacity>
       );

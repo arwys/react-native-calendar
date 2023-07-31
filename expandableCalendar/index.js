@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, {Component} from 'react';
-import {PanResponder, Animated, View, Text} from 'react-native';
+import {PanResponder, Animated, View, Text,Image} from 'react-native';
 import PropTypes from 'prop-types';
 import XDate from 'xdate';
 import {CALENDAR_KNOB} from '../testIDs';
@@ -11,7 +11,7 @@ import styleConstructor from './style';
 import CalendarList from '../calendar-list';
 import asCalendarConsumer from './asCalendarConsumer';
 import Week from './week';
-import ImageWrapper from '../../../src/components/Images/ImageWrapper';
+
 
 const commons = require('./commons');
 
@@ -467,7 +467,7 @@ class ExpandableCalendar extends Component {
     }
 
     return (
-      <ImageWrapper
+      <Image
         source={
           direction === 'right' ? this.props.rightArrowImageSource : this.props.leftArrowImageSource
         }
